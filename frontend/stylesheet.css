@@ -1,0 +1,85 @@
+.Title {
+    padding-top: 10px;
+
+    height: 120px;
+    width: 550px;
+}
+
+body {
+    /* background-color: rgb(22, 22, 22); */
+    background-image: url(Images/Background.png);
+    background-repeat: no-repeat;       /* evita que se repita */
+    background-size: cover;             /* ajusta la imagen al tamaño del viewport */
+    background-position: center center; /* centra la imagen */
+    background-attachment: fixed;       /* opcional: efecto de parallax */
+
+    text-align: center;
+    padding: 0px 40px;
+}
+
+.Objects {
+    padding: 20px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* 200px = tamaño mínimo */
+    gap: 20px;
+    justify-content: start; /* Alinea las cards a la izquierda */
+}
+
+@keyframes popup {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.card
+{
+    border-radius: 20px;
+    border-width: 3px;
+    border-color: rgb(158, 218, 248);
+}
+
+.card.popup-anim {
+    opacity: 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    transform: scale(0.8);
+    animation-name: popup;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.card-img-top
+{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.card-status 
+{
+    font-weight: bold;
+}
+
+.form-select {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+
+    border-width: 2px;
+    border-color: rgb(158, 218, 248);
+}
+
+.form-select form-select-sm {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
